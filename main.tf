@@ -8,14 +8,14 @@ module "ec2_cluster" {
   version                = "~> 2.0"
 
   name                   = "my-cluster"
-  instance_count         = 5
+  instance_count         = 1
 
-  ami                    = "ami-ebd02392"
+  ami                    = "ami-0cf6f5c8a62fa5da6"
   instance_type          = "t2.micro"
-  key_name               = "user1"
+  key_name               = "aws-tek-0729"
   monitoring             = true
-  vpc_security_group_ids = ["sg-12345678"]
-  subnet_id              = "subnet-eddcdzz4"
+  vpc_security_group_ids = ["sg-0046aed230a8e031d","sg-01f2957bbeee8f8ab"]
+  subnet_id              = "subnet-1a4cb447"
 
   tags = {
     Terraform   = "true"
