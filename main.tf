@@ -14,7 +14,7 @@ module "ec2_cluster" {
   instance_type          = "t2.micro"
   key_name               = "aws-tek-0729"
   monitoring             = true
-  vpc_security_group_ids = ["sg-0046aed230a8e031d","sg-01f2957bbeee8f8ab"]
+  vpc_security_group_ids = var.security_group
   subnet_id              = "subnet-1a4cb447"
 
   tags = {
